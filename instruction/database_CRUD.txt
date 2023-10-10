@@ -1,0 +1,75 @@
+* note: when creating of subcollection the format is lik this
+    *  const adding_subcollection = firebase.firestore();
+    * const collection_that_have_subcollection = adding_subcollection.collection('name of collection or variable that have string').doc();
+    * collection('').doc('').collection('').doc('').collection('');
+    * note every starting of reading adding the end of the getting or adding collection is end of collection
+
+* import this in html or js
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+* firebase initialized
+
+var firebaseConfig = {
+    apiKey: "AIzaSyDvIeYbzsXrEVUG2rC3rLJz7TCHj4qoPnk",
+    authDomain: "eulap-dtr.firebaseapp.com",
+    projectId: "eulap-dtr",
+    storageBucket: "eulap-dtr.appspot.com",
+    messagingSenderId: "693947688025",
+    appId: "1:693947688025:web:5942c49f474ff1fc3afd48",
+    measurementId: "G-BYEEMVWVFP"
+  };
+  * start initialized
+    firebase.initializeApp(firebaseConfig);
+
+  * method 1;
+  const db = firebase.firestore();
+  const collection_name = db.collection(varibale/string);
+  
+  *method 2;
+  const collection_name = firebase.firestore().collection(string/variable);
+
+  const want_to_add = {
+    variable_name_assign_in_database: 'string',
+    variable_name_assign_in_database: 'varaibles_that_converted to string'
+    * note: string, number, boolean, map, array, null, timestamp, geopoint;
+  };
+
+  collection.add(want_to_add)
+      .then(docRef => {
+        if ()
+        console.log('Data added with ID:', docRef.id);
+      })
+      .catch(error => {
+        console.error('Error adding data:', error);
+      });
+
+* for more info 
+https://firebase.google.com/docs/firestore/manage-data/add-data
+
+//search method or comparison method
+      eulap.where("name_of_variable_in_the_database", "==", value_or_string).onSnapshot(function(snapshot) {
+        if (snapshot.empty) {
+          console.log('does not exist');
+        }else {
+          console.log('exit');
+        }
+      });
+
+      * make a unique custom id
+      * Get a reference to the Firestore collection
+      const collectionRef = firebase.firestore().collection('string/varibale');
+      * Define your custom ID
+      const customId = string/varibale;
+      * Add a new document with your custom ID
+      collectionRef.doc(customId).set(data)
+      .then(() => {
+        console.log('Document added successfully!');
+      })
+      .catch((error) => {
+        console.error('Error adding document: ', error);
+      });
+
+      * show real id
+      const initializedRealID = eulap.doc();
+      const displayRealID = initializedRealID.id; 

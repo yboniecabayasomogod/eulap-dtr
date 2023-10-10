@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+}
+
+.fullscreen {
+  background-color: white;
+}
+
+body {
+  width: 100%;
+
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when
+  the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+  on the container's size */
+  background-size: cover;
+}
+
+header, footer,.databseThead {
+    background-color: rgb(135, 206, 235);
+    background-image: linear-gradient(to left, rgb(135, 206, 235), rgb(255, 255, 255));  
+}
+
+img {
+    margin: 8px;
+    height: 40px;
+}
+
+article {
+  float: left;
+  width: 78%;
+  margin: 1%;
+}
+
+main {
+  float: left;
+  width: 78%;
+  margin: 1%;
+}
+
+aside {
+  float: right;
+  width: 20%;
+  height: auto;
+  position: fixed;
+  top: 50px; /* Set top position to accommodate the height of the header */
+  right: 0;
+  height: 100%;
+  background-image: linear-gradient(to left, rgb(135, 206, 235), rgb(255, 255, 255));  
+}
+
+footer {
+  clear: both;
+}
+
+table {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.thRight {
+  text-align: center;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  width: 25%;
+}
+
+.thFitContent {
+ white-space: nowrap;
+}
+
+.register_form {
+  margin-top: 0.5in;
+}
+
+.add_attendance_form {
+  margin-top: 0.5in;
+}
+
+.main_form {
+  margin-top: 0.5in;
+}
+
+span {
+  color: red;
+}

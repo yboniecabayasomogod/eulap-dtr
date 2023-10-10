@@ -1,0 +1,4 @@
+    // convert usert firstname, middleinitalname, lastname to same format
+    const firstname_get_value_formatted = firstname_get_value.charAt(0).toUpperCase() + firstname_get_value.slice(1);
+    const middle_initial_name_get_value_formatted = middle_initial_name_get_value.charAt(0).toUpperCase() + middle_initial_name_get_value.slice(1);
+    const lastNnme_get_value_formatted = lastname_get_value.charAt(0).toUpperCase() + lastname_get_value.slice(1);

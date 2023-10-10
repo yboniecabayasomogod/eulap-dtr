@@ -1,0 +1,31 @@
+https://www.plus2net.com/javascript_tutorial/clock.php
+
+const currentDate = new Date();
+const year = currentDate.getFullYear();
+const month = ('0' + (currentDate.getMonth() + 1)).slice(-2);
+const day = ('0' + currentDate.getDate()).slice(-2);
+const formattedDate = `${year}-${month}-${day}`;
+const collectionDocDate = formattedDate;
+const currentTime = new Date().toLocaleTimeString([], {hour12: true});
+const convertCurrentTime = currentTime.replace(/:\d{2}\s/, ' ');
+
+function display_c(){
+  var refresh=1000; // Refresh rate in milli seconds
+  mytime=setTimeout('display_ct()',refresh)
+  }
+  
+  function display_ct() {
+    const currentTime = new Date().toLocaleTimeString([], {hour12: true}); 
+  const currentDate = new Date(); 
+  const year = currentDate.getFullYear();
+  const month = ('0' + (currentDate.getMonth() + 1)).slice(-2);
+  const day = ('0' + currentDate.getDate()).slice(-2);
+  const formattedDate = `${year}-${month}-${day}`;
+  const display_currentDate = document.getElementById('current-date');
+  const display_currentTime = document.getElementById('current-time');
+  display_currentDate.textContent = formattedDate;
+  display_currentTime.textContent = currentTime;
+  display_currentDate.style.fontWeight = "bold";
+  display_currentTime.style.fontWeight = "bold";
+  display_c();
+  }

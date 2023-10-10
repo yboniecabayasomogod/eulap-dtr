@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    window.history.forward();
+    function noBack() {
+        window.history.forward();
+    }
+  </script>
+  <link rel="stylesheet" href="../css_modified/fixing.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title id="idNumber">Id that pass</title>
+</head>
+<body onload=display_ct();>
+  <div>
+  <header class="d-flex flex-wrap justify-content-md-start fixed-top">
+    <img src="../drawable_modified/eulap_logo_180x.png" alt="eulap logo">
+  </header>
+</div>
+  <main class="float-left">
+    <div class="register_form">
+    <h1 class="text-center">Update Employee Information</h1>
+    <p><span>* Note:</span> Please be advised that this website/system is intended for use by the authorized administrator only. Unauthorized access and use of this website/system is strictly prohibited.</p>
+    <form id="time-in-out-form">
+      <div class="form-group">
+        <label for="name-input">ID Number<span> *</span></label>
+        <input type="number" class="form-control" id="id-number-input" placeholder="Type your assigned ID here...">
+        <label for="gender-select">Company Position<span> *</span></label>
+        <select class="form-control" id="position-select">
+          <option value="Select your position in eulap company...">Select your position in eulap company...</option>
+          <option value="Developer">Developer</option>
+          <option value="Quality Assurance">Quality Assurance</option>
+          <option value="Sales">Sales</option>
+          <option value="Accountant">Accountant</option>
+          <option value=">Human Resources">Human Resources</option>
+        </select>
+        <label for="name-input">Firstname<span> *</span></label>
+        <input type="text" class="form-control" id="firstname-input" placeholder="Type your firstname here...">
+        <label for="name-input">Middle Initial<span> *</span></label>
+        <input type="text" class="form-control" id="middle-initial-input" placeholder="Type your middle initial here...">
+        <label for="name-input">Lastname<span> *</span></label>
+        <input type="text" class="form-control" id="lastname-input" placeholder="Type your lastname here...">
+        <label for="name-input">Age<span> *</span></label>
+        <input type="number" class="form-control" id="age-input" placeholder="Type your age here...">
+        <label for="gender-select">Gender<span> *</span></label>
+        <select class="form-control" id="gender-select">
+          <option value="Select your Gender...">Select your Gender...</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <label for="name-input">Address<span> *</span></label>
+        <input type="text" class="form-control" id="address-input" placeholder="Type your address here...">
+        <label for="name-input">Contact #<span> *</span></label>
+        <input type="number" class="form-control" id="contact-input" placeholder="Type your contact information here...">
+      </div>
+    </form>
+  </div>     
+  </main>
+  <aside class="float-right">
+    <div class="mt-5" scope="col">Date Today</div>
+    <div><h3 id="current-date">Date</h3></div>
+    <div scope="col">Current Time</div>
+    <div><h3 id="current-time">Time</h3></div>
+    <div id="button-validation" class="mb-5"></div>
+    <a class="btn btn-outline-info m-1" id="btn-submit-attendance">Update information</a>
+    <a class="btn btn-primary m-1" href="register_eulap_employee.html">Go to Register</a>
+    <a class="btn btn-secondary m-1" href="add_eulap_employee_attendance.html">Add Attendance</a>
+    <a class="btn btn-success m-1" href="read_eulap_employee_attendance.html">Summary Today</a>
+    <a class="btn btn-info m-1" href="over_all_summary.html">Summary Dates</a>
+    <a class="btn btn-warning m-1" href="eulap_employee_information.html">Employees Infromation</a>
+    <a class="btn btn-outline-danger m-1 mt-5" href="../index.html">Logout</a>
+  </aside>
+  <footer>
+      <div class="text-center m-1">
+        <p class="mb-0">eulap &copy; 2023</p>
+      </div>
+  </footer>
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="../js_modified/update_eulap_employee_information.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+eulap_firebase_database = {
+    apiKey: "AIzaSyDvIeYbzsXrEVUG2rC3rLJz7TCHj4qoPnk",
+    authDomain: "eulap-dtr.firebaseapp.com",
+    projectId: "eulap-dtr",
+    storageBucket: "eulap-dtr.appspot.com",
+    messagingSenderId: "693947688025",
+    appId: "1:693947688025:web:5942c49f474ff1fc3afd48",
+    measurementId: "G-BYEEMVWVFP"
+};
+
+firebase.initializeApp(eulap_firebase_database);
+* register 
+const eulap_register_collection = firebase.firestore().collection('eulap_register');
+* add attendance
+const eulap_attendance_collection = firebase.firestore().collection('eulap_attendance');

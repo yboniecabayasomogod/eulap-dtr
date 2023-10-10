@@ -1,0 +1,82 @@
+[debug] [2023-05-11T09:30:14.239Z] ----------------------------------------------------------------------
+[debug] [2023-05-11T09:30:14.245Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2023-05-11T09:30:14.247Z] CLI Version:   11.30.0
+[debug] [2023-05-11T09:30:14.248Z] Platform:      win32
+[debug] [2023-05-11T09:30:14.249Z] Node Version:  v18.16.0
+[debug] [2023-05-11T09:30:14.253Z] Time:          Thu May 11 2023 17:30:14 GMT+0800 (Singapore Standard Time)
+[debug] [2023-05-11T09:30:14.254Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-11T09:30:15.190Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-11T09:30:15.192Z] > authorizing via signed-in user (02.07.0zer0@gmail.com)
+[debug] [2023-05-11T09:30:15.193Z] [iam] checking project eulap-dtr for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-11T09:30:15.206Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/eulap-dtr:testIamPermissions [none]
+[debug] [2023-05-11T09:30:15.207Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/eulap-dtr:testIamPermissions x-goog-quota-user=projects/eulap-dtr
+[debug] [2023-05-11T09:30:15.207Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eulap-dtr:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-11T09:30:16.784Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/eulap-dtr:testIamPermissions 200
+[debug] [2023-05-11T09:30:16.785Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eulap-dtr:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-11T09:30:16.790Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/eulap-dtr [none]
+[debug] [2023-05-11T09:30:17.366Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/eulap-dtr 200
+[debug] [2023-05-11T09:30:17.366Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/eulap-dtr {"projectId":"eulap-dtr","projectNumber":"693947688025","displayName":"EULAP DTR","name":"projects/eulap-dtr","resources":{"hostingSite":"eulap-dtr"},"state":"ACTIVE","etag":"1_33e725df-c72e-4e98-abca-8c63b4e960a2"}
+[info] 
+[info] === Deploying to 'eulap-dtr'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-11T09:30:17.539Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eulap-dtr/versions [none]
+[debug] [2023-05-11T09:30:17.539Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eulap-dtr/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-11T09:30:18.813Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eulap-dtr/versions 200
+[debug] [2023-05-11T09:30:18.813Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eulap-dtr/versions {"name":"projects/693947688025/sites/eulap-dtr/versions/696b3ea9982a2c93","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[eulap-dtr]: beginning deploy... 
+[debug] [2023-05-11T09:30:20.079Z] Error: EPERM: operation not permitted, scandir 'C:/Users/Bunie/Desktop/eulapDTR/public/firebase-debug.log'
+    at Object.readdirSync (node:fs:1452:3)
+    at GlobSync._readdir (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:285:46)
+    at GlobSync._readdirInGlobStar (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:242:17)
+    at GlobSync._readdir (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:273:17)
+    at GlobSync._processReaddir (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:134:22)
+    at GlobSync._process (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:129:10)
+    at GlobSync._processGlobStar (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:377:10)
+    at GlobSync._process (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:127:10)
+    at new GlobSync (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:45:10)
+    at globSync (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:23:10)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-05-11T09:32:31.377Z] ----------------------------------------------------------------------
+[debug] [2023-05-11T09:32:31.382Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2023-05-11T09:32:31.384Z] CLI Version:   11.30.0
+[debug] [2023-05-11T09:32:31.386Z] Platform:      win32
+[debug] [2023-05-11T09:32:31.387Z] Node Version:  v18.16.0
+[debug] [2023-05-11T09:32:31.389Z] Time:          Thu May 11 2023 17:32:31 GMT+0800 (Singapore Standard Time)
+[debug] [2023-05-11T09:32:31.390Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-11T09:32:31.619Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-11T09:32:31.621Z] > authorizing via signed-in user (02.07.0zer0@gmail.com)
+[debug] [2023-05-11T09:32:31.622Z] [iam] checking project eulap-dtr for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-11T09:32:31.629Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/eulap-dtr:testIamPermissions [none]
+[debug] [2023-05-11T09:32:31.630Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/eulap-dtr:testIamPermissions x-goog-quota-user=projects/eulap-dtr
+[debug] [2023-05-11T09:32:31.630Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eulap-dtr:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-11T09:32:32.870Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/eulap-dtr:testIamPermissions 200
+[debug] [2023-05-11T09:32:32.870Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eulap-dtr:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-11T09:32:32.874Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/eulap-dtr [none]
+[debug] [2023-05-11T09:32:33.402Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/eulap-dtr 200
+[debug] [2023-05-11T09:32:33.402Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/eulap-dtr {"projectId":"eulap-dtr","projectNumber":"693947688025","displayName":"EULAP DTR","name":"projects/eulap-dtr","resources":{"hostingSite":"eulap-dtr"},"state":"ACTIVE","etag":"1_33e725df-c72e-4e98-abca-8c63b4e960a2"}
+[info] 
+[info] === Deploying to 'eulap-dtr'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-11T09:32:33.428Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eulap-dtr/versions [none]
+[debug] [2023-05-11T09:32:33.429Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eulap-dtr/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-11T09:32:34.622Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eulap-dtr/versions 200
+[debug] [2023-05-11T09:32:34.622Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eulap-dtr/versions {"name":"projects/693947688025/sites/eulap-dtr/versions/6143ae9a9a273a4c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[eulap-dtr]: beginning deploy... 
+[debug] [2023-05-11T09:32:35.646Z] Error: EPERM: operation not permitted, scandir 'C:/Users/Bunie/Desktop/eulapDTR/public/firebase-debug.log'
+    at Object.readdirSync (node:fs:1452:3)
+    at GlobSync._readdir (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:285:46)
+    at GlobSync._readdirInGlobStar (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:242:17)
+    at GlobSync._readdir (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:273:17)
+    at GlobSync._processReaddir (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:134:22)
+    at GlobSync._process (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:129:10)
+    at GlobSync._processGlobStar (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:377:10)
+    at GlobSync._process (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:127:10)
+    at new GlobSync (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:45:10)
+    at globSync (C:\Users\Bunie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:23:10)
+[error] 
+[error] Error: An unexpected error has occurred.

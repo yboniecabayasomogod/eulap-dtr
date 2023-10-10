@@ -1,0 +1,14 @@
+    // time format In the database
+    const current_time = new Date();
+    output: 
+    
+    // convert the date/time from database
+    const time_in_converted_from_database = time_in_from_database.toDate();
+    const time_out_converted_from_database = time_out_from_database.toDate();
+    const time_in_time = time_in_converted_from_database.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+    const time_out_time = time_out_converted_from_database.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })
+    output: 12:00 AM/PM no second running
+
+    // time convertion format
+    const currentTime = new Date().toLocaleTimeString([], {hour12: true});
+    output: 12:00 AM/PM no second running
